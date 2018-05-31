@@ -1,29 +1,22 @@
+import overworld from '../songs/overworld.mp3'
+import gameover from '../songs/gameover.mp3'
 
 export const listMusic = [
     {
         name: "one",
-        song: "",
+        path: overworld
     }, {
         name: "two",
-        song: ""
-    }, {
-        name: "hello",
-        song: ""
-    }, {
-        name: "hi",
-        song: ""
-    }, {
-        name: "four",
-        song: ""
+        path: gameover
     }
 ]
 
 export const listPlayList = [
     {
         name: "one",
-        song: "",
+        path: "",
     }, {
         name: "four",
-        song: ""
+        path: ""
     }
 ]

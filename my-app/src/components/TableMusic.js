@@ -8,24 +8,25 @@ export default class TableMusic extends Component {
         return (
 
             <table>
-                <Song />
                 <tbody>
                     {this.props.type === "list" ?
                         listMusic.map((value) =>
                             <tr key={value.name}>
                                 <td>{value.name}</td>
-                                <td><audio src="../songs/overworld.mp3" controls="controls"> </audio></td>
-                                <td><button>{this.props.symbol}</button></td>
+                                <td>
+                                    <Song path={value.path} name={value.name} />
+                                </td>
+                                <td>
+                                    <button>{this.props.symbol}</button>
+                                </td>
                             </tr>)
                         :
                         listPlayList.map((value) =>
                             <tr key={value.name}>
                                 <td>{value.name}</td>
-                                <td><audio src="../songs/overworld.mp3" controls="controls"> </audio></td>
                                 <td><button>{this.props.symbol}</button></td>
                             </tr>)
                     }
-
                 </tbody>
             </table>
         )
