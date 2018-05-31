@@ -20,13 +20,12 @@ export default class Prime extends Component {
     //arrow function for binding
     handleClick = () => {
         this.setState({ result: CalcPositionPrime(this.state.input) })
-        console.log(this.state.result)
     }
 
     render() {
         return (
             <div>
-                <p>Selection du n-ième chiffre premier</p>
+                <p>Selection du n-ième chiffre premier (limité a 25)</p>
                 <input type="number" onChange={this.handleChange} />
                 <button onClick={this.handleClick}> Valider</button>
                 <p>Resultat : {this.state.result}</p>
