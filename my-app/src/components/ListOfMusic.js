@@ -1,4 +1,29 @@
 
-export const listMusic = ["one", "two", "hello", "hi"]
+export const listMusic = [
+    {
+        name: "one",
+        song: "",
+    }, {
+        name: "two",
+        song: ""
+    }, {
+        name: "hello",
+        song: ""
+    }, {
+        name: "hi",
+        song: ""
+    }, {
+        name: "four",
+        song: ""
+    }
+]
 
-export const listPlayList = ["one", "hi"]
+export const listPlayList = [
+    {
+        name: "one",
+        song: "",
+    }, {
+        name: "four",
+        song: ""
+    }
+]

@@ -7,17 +7,17 @@ export default class TableMusic extends Component {
         return (
             <table>
                 <tbody>
-                    {this.props.type == "list" ?
+                    {this.props.type === "list" ?
                         listMusic.map((value) =>
-                            <tr>
-                                <td>{value}</td>
+                            <tr key={value.name}>
+                                <td>{value.name}</td>
                                 <td><button>play</button></td>
                                 <td><button>{this.props.symbol}</button></td>
                             </tr>)
                         :
                         listPlayList.map((value) =>
-                            <tr>
-                                <td>{value}</td>
+                            <tr key={value.name}>
+                                <td>{value.name}</td>
                                 <td><button>play</button></td>
                                 <td><button>{this.props.symbol}</button></td>
                             </tr>)
