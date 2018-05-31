@@ -6,12 +6,19 @@ export default class Music extends Component {
     render() {
         return (
             <div>
-                <p>My music</p>
-                <div className="table">
-                    <TableMusic type="list" symbol=" ( + )" />
-                    <TableMusic type="playList" symbol=" ( X )" />
-                </div>
 
+                <div className="table">
+                    <div>
+                        <p>Music</p>
+                        <TableMusic type="list" symbol=" ( + )" />
+                    </div>
+
+                    <div>
+                        <p>My playlist</p>
+                        <TableMusic type="playList" symbol=" ( X )" />
+                    </div>
+
+                </div>
             </div>
         )
     }
