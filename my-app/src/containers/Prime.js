@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import CalcPositionPrime from '../components/CalcPositionPrime'
 
 export default class Prime extends Component {
     constructor() {
@@ -10,19 +11,25 @@ export default class Prime extends Component {
     }
     //arrow function for binding
     handleChange = (e) => {
+        if (e.target.value < 0) {
+            e.target.value = 0
+        }
         this.setState({ input: e.target.value })
-        console.log(this.state.input)
     }
-    handleClick() {
-        console.log("test")
+
+    //arrow function for binding
+    handleClick = () => {
+        this.setState({ result: CalcPositionPrime(this.state.input) })
+        console.log(this.state.result)
     }
+
     render() {
         return (
             <div>
                 <p>Selection du n-ième chiffre premier</p>
                 <input type="number" onChange={this.handleChange} />
                 <button onClick={this.handleClick}> Valider</button>
-                <p>result</p>
+                <p>Resultat : {this.state.result}</p>
             </div>
         )
     }
