@@ -11,11 +11,9 @@ export default class Song extends Component {
     }
     handleClick = () => {
         if (this.state.onPlaying === Sound.status.STOPPED) {
-            this.setState({ onPlaying: Sound.status.PLAYING })
-            this.setState({ symbol: "stop" })
+            this.setState({ onPlaying: Sound.status.PLAYING, symbol: "stop" })
         } else {
-            this.setState({ onPlaying: Sound.status.STOPPED })
-            this.setState({ symbol: "play" })
+            this.setState({ onPlaying: Sound.status.STOPPED, symbol: "play" })
         }
     }
     render() {
