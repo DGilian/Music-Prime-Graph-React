@@ -5,14 +5,17 @@ export default class Song extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            onPlaying: Sound.status.STOPPED
+            onPlaying: Sound.status.STOPPED,
+            symbol: "play"
         }
     }
     handleClick = () => {
         if (this.state.onPlaying === Sound.status.STOPPED) {
             this.setState({ onPlaying: Sound.status.PLAYING })
+            this.setState({ symbol: "stop" })
         } else {
             this.setState({ onPlaying: Sound.status.STOPPED })
+            this.setState({ symbol: "play" })
         }
     }
     render() {
@@ -26,7 +29,7 @@ export default class Song extends Component {
                 // onPlaying={this.handleSongPlaying}
                 //onFinishedPlaying={this.handleSongFinishedPlaying}
                 />
-                <button onClick={this.handleClick}>play</button>
+                <button onClick={this.handleClick}>{this.state.symbol}</button>
             </div>
         )
     }

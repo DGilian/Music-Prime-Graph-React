@@ -4,7 +4,7 @@ export default class Graph extends Component {
     render() {
         return (
             <div>
-                <p>graph</p>
+                <p>Work in progress</p>
             </div>
         )
     }

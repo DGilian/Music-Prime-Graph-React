@@ -4,6 +4,9 @@ import { listPlayList } from './ListOfMusic'
 import Song from './Song'
 
 export default class TableMusic extends Component {
+    handleClick() {
+        console.log("youhou")
+    }
     render() {
         return (
 

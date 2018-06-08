@@ -3,17 +3,17 @@ import gameover from '../songs/gameover.mp3'
 
 export const listMusic = [
     {
-        name: "one",
+        name: "overworld",
         path: overworld
     }, {
-        name: "two",
+        name: "gameover",
         path: gameover
     }
 ]
 
 export const listPlayList = [
     {
-        name: "one",
+        name: "overworld",
         path: "",
     }, {
         name: "four",
